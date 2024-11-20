@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap-grid.css">
+</head>
+<br>
+<br>
+<body>
+    <h1 class="text-center">Tic-Tac-Toe</h1>
+    <h5 id="turnInfo" class="text-center">
+        Player 1's Turn
+    </h5>
+    <br>
+    <table class="container table-bordered border-black " id="board">
+        <tr>
+            <td class="text-center ">
+                <button class="text-center button btn-block gmBtn" id="1">1</button>
+            </td>
+            <td class="text-center">
+                <button class="text-center button btn-block gmBtn" id="2">2</button>
+            </td>
+            <td class="text-center">
+                <button class="text-center button btn-block gmBtn" id="3">3</button>
+            </td>
+        </tr>
+        <tr>
+            <td class="text-center">
+                <button class="text-center button btn-block gmBtn" id="4">4</button>
+            </td>
+            <td class="text-center">
+                <button class="text-center button btn-block gmBtn" id="5">5</button>
+            </td>
+            <td class="text-center">
+                <button class="text-center button btn-block gmBtn" id="6">6</button>
+            </td>
+        </tr>
+        <tr>
+            <td class="text-center">
+                <button class="text-center button btn-block gmBtn" id="7">7</button>
+            </td>
+            <td class="text-center">
+                <button class="text-center button btn-block gmBtn" id="8">8</button>
+            </td>
+            <td class="text-center">
+                <button class="text-center button btn-block gmBtn" id="9">9</button>
+            </td>
+        </tr>
+    </table>
+
+    <br>
+    <button class="btn btn-danger position-relative translate-middle start-50" id="reset">Reset</button>
+
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
