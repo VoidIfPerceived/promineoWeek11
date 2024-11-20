@@ -14,6 +14,7 @@ End turn
 */
 
 let board = $("#board");
+let turnInfo = $("#turnInfo");
 console.log($("#board"));
 console.log($("td").children());
 let squareValues = [0,0,0,0,0,0,0,0,0];
@@ -40,13 +41,23 @@ let update = () => {
 
 
     if(winner == 1) {
-        $("#turnInfo").text("X Wins!");
+        turnInfo.text(" ");
+        turnInfo.append("<div>X Wins!</div>");
+        $("div").attr("class", "alert alert-danger");
+        $("div").attr("role", "alert");
+
     }
     if(winner == 2) {
-        $("#turnInfo").text("O Wins!");
+        turnInfo.text(" ");
+        turnInfo.append("<div>O Wins!</div>");
+        $("div").attr("class", "alert alert-info");
+        $("div").attr("role", "alert");
     }
     if(winner == 0 && squareSum > 12) {
-        $("#turnInfo").text("It's a tie!");
+        turnInfo.text(" ");
+        turnInfo.append("<div>It's a Tie!</div>");
+        $("div").attr("class", "alert alert-warning");
+        $("div").attr("role", "alert");
     }
 })}
 
@@ -177,6 +188,7 @@ $("#reset").on("click", function() {
     squareValues = [0,0,0,0,0,0,0,0,0];
     squareSum = 0;
     winner = 0;
+    $("div").remove();
     update();
 } );
 
